@@ -7,10 +7,14 @@ var parser = require('stack-trace-parser');
 module.exports = function(code, test, done) {
 
   var box = puzzle.create();
+  mute = {
+    log: function(){},
+    error: function(){}
+  };
 
   box.context({
     'require': require,
-    'console': console,
+    'console': mute,
     'module':  module
   });
 
@@ -18,7 +22,7 @@ module.exports = function(code, test, done) {
   box.track('code');
 
   try {
-    box.run()
+    box.run();
   }
   catch (e) {
 
@@ -60,4 +64,4 @@ module.exports = function(code, test, done) {
 
   });
 
-}
+};

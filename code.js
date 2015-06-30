@@ -8,7 +8,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 // on connection
 db.once('open', function () {
-  console.log('mongoose connected!')
+  console.log('mongoose connected!');
 // define schema
 
   var kittySchema = mongoose.Schema({
@@ -16,10 +16,10 @@ db.once('open', function () {
     });
 
   // register schema
-  var Kitten = mongoose.model('Kitten', kittySchema)
+  var Kitten = mongoose.model('Kitten', kittySchema);
 
-  var silence = new Kitten({ name: 'Test' })
-  console.log(silence.name) // 'Test'
+  var silence = new Kitten({ name: 'Test' });
+  console.log(silence.name); // 'Test'
 
   // save to DB
   silence.save(function (err, silence) {
