@@ -1,0 +1,23 @@
+{
+  "name": "blackbox-js",
+  "description": "js runner",
+  "version": "0.0.1",
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "puzzle-box": "*",
+    "stack-trace-parser": "0.0.6"
+  },
+  "devDependencies": {
+    "mongoose": "*",
+    "should": "^7.0.1"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/wearefractal/APPNAME/raw/master/LICENSE"
+    }
+  ]
+}
