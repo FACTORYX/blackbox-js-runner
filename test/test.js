@@ -1,21 +1,17 @@
 var should = require('should');
 
 module.exports = function(box) {
-
+  var tracer = box._context.__tracer;
   return [{
-      test: 'foo',
-      assertion: function() { true.should.equal(false);},
-      hints: [{
-        message: "true should not be false",
-        lineNumber: 0
-      }]
+    test: 'foo',
+    assertion: function() {
+      var handle = tracer.trackLogs({ids: [tracer.nodes()[1].id]});
+      invocations = tracer.logDelta(handle);
+      should(tracer.nodes()[1].name).equal('console.log');
+      // should(invocations[0].arguments[0].value.value).equal('test');
     },
-    {
-      test: "mongoose should be defined",
-      assertion: function() { box.sandbox().mongoose.should.have.property('connections');},
-      hints: [{
-        message: "did you forget to define mongoose?",
-        lineNumber: 0
-      }]
-    }];
+    hints: [{
+      message: "console.log should be added"
+    }]
+  }];
 };

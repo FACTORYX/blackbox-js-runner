@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "coffee-script": "^1.9.3",
-    "puzzle-box": "*",
+    "puzzle-box": "wearefractal/puzzle-box",
     "stack-trace-parser": "0.0.6"
   },
   "devDependencies": {
