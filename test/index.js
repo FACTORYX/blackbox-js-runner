@@ -1,4 +1,4 @@
-runPuzzle = require('../runPuzzle');
+runPuzzle = require('../lib/runPuzzle');
 
 code = require('fs').readFileSync(__dirname+'/code.js', 'utf8');
 test = require('./test');
