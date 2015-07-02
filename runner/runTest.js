@@ -1,5 +1,5 @@
 var fs = require('fs');
-var runPuzzle = require('./runPuzzle');
+var runPuzzle = require('./lib/runPuzzle');
 
 code = fs.readFileSync('./code.js');
 test = require('../test');
