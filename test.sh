@@ -1,1 +1,1 @@
-node runner/runTest.js
+NODE_PATH=$PWD node runner/runTest.js

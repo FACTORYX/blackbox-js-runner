@@ -1,1 +1,1 @@
-node ./code.js
+node ./runner/runCode.js
