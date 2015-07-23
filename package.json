@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "coffee-script": "^1.9.3",
-    "puzzle-box": "0.2.0",
+    "puzzle-box": "stevelacy/puzzle-box",
     "stack-trace-parser": "stevelacy/node-stack-trace-parser"
   },
   "devDependencies": {
