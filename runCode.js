@@ -8,7 +8,10 @@ var code = fs.readFileSync(path.resolve(__dirname, '../code.js'), 'utf8');
   var done = function(){};
   var req = require;
   require = function(name) {
-    return req('/app/' + name);
+    if (name.indexOf('.') > -1 || name.indexOf('/') > -1) {
+      return req('/app/' + name);
+    }
+    return req(name);
   };
 
   eval(code);
