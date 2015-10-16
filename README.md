@@ -1,3 +1,3 @@
-# grokbox-nodejs-runner
+# bosca-nodejs-runner
 
-Run nodejs code wrapped in a callback in a docker
+Run nodejs $1
